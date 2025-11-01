@@ -147,7 +147,7 @@ function App() {
           <>
             {currentPage === 'home' && (
               <div className="space-y-6">
-                <div className="bg-gradient-to-r from-purple-900 to-purple-700 rounded-lg p-8 mb-8 border border-purple-500/20">
+                <div className="bg-gradient-to-r from-purple-900 to-purple-700 rounded-lg p-8 mb-8 border border-gray-700 shadow-lg">
                   <h1 className="text-4xl font-bold text-white mb-2">
                     Welcome to Zethon.vip
                   </h1>
@@ -156,14 +156,14 @@ function App() {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
                   <div className="lg:col-span-2">
                     <ForumHome
                       categories={categories}
                       onCategoryClick={handleCategoryClick}
                     />
                   </div>
-                  <div>
+                  <div className="lg:sticky lg:top-24 self-start">
                     <Shoutbox
                       messages={shoutboxMessages}
                       onSendMessage={handleSendShout}
@@ -174,14 +174,14 @@ function App() {
             )}
 
             {currentPage === 'forum' && (
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
                 <div className="lg:col-span-2">
                   <ForumHome
                     categories={categories}
                     onCategoryClick={handleCategoryClick}
                   />
                 </div>
-                <div>
+                <div className="lg:sticky lg:top-24 self-start">
                   <Shoutbox
                     messages={shoutboxMessages}
                     onSendMessage={handleSendShout}
@@ -191,7 +191,7 @@ function App() {
             )}
 
             {currentPage === 'category' && selectedCategory && (
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
                 <div className="lg:col-span-2">
                   <ThreadList
                     threads={categoryThreads}
@@ -200,7 +200,7 @@ function App() {
                     onCreateThread={handleCreateThread}
                   />
                 </div>
-                <div>
+                <div className="lg:sticky lg:top-24 self-start">
                   <Shoutbox
                     messages={shoutboxMessages}
                     onSendMessage={handleSendShout}
@@ -210,7 +210,7 @@ function App() {
             )}
 
             {currentPage === 'thread' && selectedThread && (
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
                 <div className="lg:col-span-2">
                   <ThreadView
                     thread={selectedThread}
@@ -220,7 +220,7 @@ function App() {
                     onReply={handleReply}
                   />
                 </div>
-                <div>
+                <div className="lg:sticky lg:top-24 self-start">
                   <Shoutbox
                     messages={shoutboxMessages}
                     onSendMessage={handleSendShout}

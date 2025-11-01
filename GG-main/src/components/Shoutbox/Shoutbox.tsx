@@ -44,7 +44,7 @@ export default function Shoutbox({ messages, onSendMessage }: ShoutboxProps) {
   };
 
   return (
-    <div className="bg-gray-800 rounded-lg border border-purple-500/20 overflow-hidden">
+    <div className="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden h-full flex flex-col shadow-lg">
       <div
         className="bg-gray-700/50 px-6 py-4 border-b border-gray-700 flex items-center justify-between cursor-pointer"
         onClick={() => setIsExpanded(!isExpanded)}
@@ -52,7 +52,7 @@ export default function Shoutbox({ messages, onSendMessage }: ShoutboxProps) {
         <div className="flex items-center space-x-2">
           <MessageCircle className="w-5 h-5 text-purple-400" />
           <h3 className="text-lg font-bold text-white">Shoutbox</h3>
-          <span className="text-xs text-gray-400">({messages.length} messages)</span>
+          <span className="text-xs text-gray-400">({messages.length})</span>
         </div>
         <button className="text-gray-400 hover:text-white transition-colors">
           {isExpanded ? '−' : '+'}
@@ -61,7 +61,7 @@ export default function Shoutbox({ messages, onSendMessage }: ShoutboxProps) {
 
       {isExpanded && (
         <>
-          <div className="h-80 overflow-y-auto p-4 space-y-3 bg-gray-900/50">
+          <div className="flex-1 overflow-y-auto p-4 space-y-3 bg-gray-900/50">
             {messages.map((msg) => (
               <div key={msg.id} className="flex items-start space-x-3 group">
                 <img

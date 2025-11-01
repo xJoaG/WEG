@@ -35,7 +35,7 @@ export default function ForumHome({ categories, onCategoryClick }: ForumHomeProp
             <div
               key={category.id}
               onClick={() => onCategoryClick(category.id)}
-              className="bg-gray-800 rounded-lg border border-purple-500/20 hover:border-purple-500/50 transition-all cursor-pointer group"
+              className="bg-gray-800 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all cursor-pointer group shadow-lg hover:shadow-purple-500/10"
             >
               <div className="p-6">
                 <div className="flex items-start justify-between">
@@ -91,7 +91,7 @@ export default function ForumHome({ categories, onCategoryClick }: ForumHomeProp
       </div>
 
       <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="bg-gray-800 rounded-lg p-6 border border-purple-500/20">
+        <div className="bg-gray-800 rounded-lg p-6 border border-gray-700 shadow-lg">
           <h3 className="text-lg font-bold text-white mb-4">Forum Stats</h3>
           <div className="space-y-3">
             <div className="flex justify-between">
@@ -113,7 +113,7 @@ export default function ForumHome({ categories, onCategoryClick }: ForumHomeProp
           </div>
         </div>
 
-        <div className="bg-gray-800 rounded-lg p-6 border border-purple-500/20">
+        <div className="bg-gray-800 rounded-lg p-6 border border-gray-700 shadow-lg">
           <h3 className="text-lg font-bold text-white mb-4">Online Now</h3>
           <div className="space-y-3">
             <div className="flex items-center space-x-2">
@@ -129,7 +129,7 @@ export default function ForumHome({ categories, onCategoryClick }: ForumHomeProp
           </div>
         </div>
 
-        <div className="bg-gray-800 rounded-lg p-6 border border-purple-500/20">
+        <div className="bg-gray-800 rounded-lg p-6 border border-gray-700 shadow-lg">
           <h3 className="text-lg font-bold text-white mb-4">Newest Member</h3>
           <div className="flex items-center space-x-3">
             <img
